@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+    margin:0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+body {
+    font-family: monospace;
+}
+
+/* Navigation */
+
+.nav-container {
+    background: #000000;
+    height: 71px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.filler {
+    width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav .logo {
+    font-weight: bold;
+    font-size: 30px;
+    color: #e7e7e7;
+    padding-left: 50px;
+}
+
+.nav-items li {
+    list-style: none;
+    margin-right: 50px;
+}
+
+.nav-items li:nth-last-of-type(1) {
+    margin: max-width;
+}
+
+.nav-items li a {
+    color: #e7e7e7;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+/* First Header Block */
+.header-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://wallpaperaccess.com/full/368843.jpg');
+    background-position: center center;
+    background-attachment:fixed;
+    height: 428px;
+    display: flex;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 61px;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+
+/* Search */
+form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    transition: all 1s;
+    width: 50px;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid white;
+    padding: 5px;
+}
+
+input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 42.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover{
+    width: 200px;
+    cursor: pointer;
+}
+
+form:hover input{
+    display: block;
+}
+
+form:hover .fa{
+    background: #000000;
+    color: white;
+}
+
+
+/*middle space*/
+.middle-space {
+    background-color: #ffffff;
+    height: 240px;
+}
+
+h4 {
+    font-size: 30px;
+    padding: 30px;
+    color: #535353;
+}
+
+h5 {
+    font-size: 20px;
+    padding-bottom: 30px;
+    color: #858585;
+}
+
+/* Second Header Block */
+.second-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/736x/c6/7c/c1/c67cc114fc289a3eacc442da873053b2.jpg');
+    background-position: center center;
+    height: 428px;
+    display: flex;
+}
+header h2 {
+    font-size: 50px;
+    line-height: 61px;
+    color: #ffffff;
+}
+
+.home-p {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 37px;
+    color: #ffffff;
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+header a {
+    font-size: 30px;
+    color: #535353;
+    text-decoration: none;
+
+    background: #F5F3F4;
+    padding: 16px 48px;
+    display: inline;
+    transition: 300ms;
+}
+
+header a:hover {
+    transform: translateY(-8px);
+}
+
+/* Search Box */
+.search-box {
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    transition: 300ms;
+    z-index: 1;
+}
+
+.search-box.active {
+    top: 72px;
+}
+
+.search-box input {
+    background: #F5F3F4;
+    width: 640px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 37px;
+    border: 0;
+    padding: 12px 12px;
+    text-align: left;
+}
+
+.search-box input::placeholder {
+    color: #D3D3D3;
+    text-align: left;
+}
+
+.search-button {
+    position: relative;
+    left: -29px;
+    vertical-align: top;
+    height: 40px;
+    border: 2px;
+    background: #F5F3F4;
+    color: #535353;
+}
+
+header h3 {
+    color: #FFFFFF;
+    font-size: 75px;
+}
+
+
+a {
+    color: #000000;
+}
+
+.back {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.multi-button {
+  display: flex;
+  width: 100%;
+  padding: calc(var(--space) * 2);
+  color: white;
+
+  --border-size: 0.125rem;
+  --duration: 250ms;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --space: 1rem;
+}
+
+.multi-button button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  padding:
+    calc(var(--space) / 1.125)
+    var(--space)
+    var(--space);
+  border: var(--border-size) solid black;
+  color: black;
+  background-color: white;
+  font-size: 1.5rem;
+  font-family: monospace;
+  transition: flex-grow var(--duration) var(--ease);
+}
+
+.multi-button button + button {
+  border-left: var(--border-size) solid black;
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.multi-button button:hover,
+.multi-button button:focus {
+  flex-grow: 2;
+  color: white;
+  background-color: black;
+}
+
+h6 {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 30px;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+/* divider */
+.divider
+{
+	position: relative;
+	margin-top: 90px;
+	height: 1px;
+}
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
