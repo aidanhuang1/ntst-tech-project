@@ -10,7 +10,7 @@ const Products = ({ products, onAddToCart }) => {
   if (!products.length) return <p>Loading...</p>;
 
   return (
-    <main className={classes.content}>
+    <main position="absolute" style={{ marginTop: '-1000px', height: '1000px' }} className={classes.content}>
       <div className={classes.toolbar} />
       <Grid container justify="center" spacing={4}>
         {products.map((product) => (

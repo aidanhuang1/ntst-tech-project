@@ -32,20 +32,20 @@ const PrimarySearchAppBar = ({ totalItems }) => {
 
   return (
     <>
-      <AppBar position="fixed" className={classes.appBar} color="inherit">
+      <AppBar position="absolute" className={classes.appBar} color="inherit" style={{ marginTop: '70px' }}>
         <Toolbar>
           <Typography component={Link} to="/" variant="h6" className={classes.title} color="inherit">
-            <img src={logo} alt="commerce.js" height="25px" className={classes.image} /> Commerce.js
+            <img src={logo} alt="commerce.js" height="25px" className={classes.image} /> Go to Shop
           </Typography>
           <div className={classes.grow} />
           {location.pathname === '/' && (
-          <div className={classes.button}>
-            <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
-              <Badge badgeContent={totalItems} color="secondary">
-                <ShoppingCart />
-              </Badge>
-            </IconButton>
-          </div>
+            <div className={classes.button}>
+              <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
+                <Badge badgeContent={totalItems} color="secondary">
+                  <ShoppingCart />
+                </Badge>
+              </IconButton>
+            </div>
           )}
         </Toolbar>
       </AppBar>
