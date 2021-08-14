@@ -17,10 +17,9 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
   );
 
   if (!cart.line_items) return 'Loading';
-
   const renderCart = () => (
-    <>
-      <Grid container spacing={3}>
+    <div position="absolute" style={{ marginTop: '-1150px', height: '1100px', backgroundColor: 'white', width: '3000px', marginLeft: '-340px' }}>
+      <Grid container spacing={3} style={{ marginTop: '100px', width: '1000px', marginLeft: '200px' }}>
         {cart.line_items.map((lineItem) => (
           <Grid item xs={12} sm={4} key={lineItem.id}>
             <CartItem item={lineItem} onUpdateCartQty={onUpdateCartQty} onRemoveFromCart={onRemoveFromCart} />
@@ -34,14 +33,14 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
           <Button className={classes.checkoutButton} component={Link} to="/checkout" size="large" type="button" variant="contained" color="primary">Checkout</Button>
         </div>
       </div>
-    </>
+    </div>
   );
 
   return (
     <Container>
       <div className={classes.toolbar} />
-      <Typography className={classes.title} variant="h3" gutterBottom>Your Shopping Cart</Typography>
-      { !cart.line_items.length ? renderEmptyCart() : renderCart() }
+      <Typography position="absolute" className={classes.title} variant="h3" gutterBottom> </Typography>
+      {!cart.line_items.length ? renderEmptyCart() : renderCart()}
     </Container>
   );
 };
